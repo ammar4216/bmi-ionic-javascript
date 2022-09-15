@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ionic Practice</title>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <ion-app>
+      <!-- Appbar -->
+      <ion-header>
+        <ion-toolbar color="danger">
+          <ion-title>BMI Calculator</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <!-- App Content / body -->
+      <ion-content class="ion-padding">
+        <ion-grid>
+          <!-- Inputs -->
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating"
+                  >Your Height (in meter):</ion-label
+                >
+                <ion-input id="height"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating"
+                  >Your Weight (in kilogram):</ion-label
+                >
+                <ion-input id="weight"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <!-- Buttons -->
+          <ion-row class="ion-text-center ion-margin">
+            <ion-col>
+              <ion-button id="calbtn" color="danger">
+                <ion-icon slot="start" name="calculator-outline"></ion-icon>
+                Calculate
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button fill="outline" id="resetbtn" color="danger">
+                <ion-icon slot="start" name="refresh-outline"></ion-icon>
+                Reset
+              </ion-button>
+            </ion-col>
+          </ion-row>
+
+          <!-- Result Area -->
+
+          <ion-grid id=result></ion-grid>
+        </ion-grid>
+      </ion-content>
+    </ion-app>
+  </body>
+</html>
